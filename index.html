@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JusTFriend</title>
+
+<link rel="icon" type="image/png" sizes="192x192" href="./logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <img src="logo.png" alt="Logo">
+      <span>JusTFriend</span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#top" class="active">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#produk">Produk</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="sound-toggle" type="button" aria-label="Nyalakan backsound" aria-pressed="false">♪</button>
+    <audio id="backgroundMusic" src="./28059159-happy-school-219332.mp3" loop preload="auto"></audio>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="hero-tag"><span class="dot"></span> Jus Buah Segar & Alami</div>
+      <h1>"Fresh Juice,</h1>
+      <h1>Good Friend."</h1>
+      <p class="lead">Lagi cari jus buah yang fresh dan enak? JusTFriend siap nemenin harimu!</p>
+      <p class="lead">Dibuat dari bahan buah asli tanpa pengawet, JusTFriend bisa kamu temukan di sekitar Polmed, USU, dan area sekitarnya, atau pesan langsung lewat platform digital kami.</p>
+      <div class="hero-actions">
+        <a href="#kontak" class="btn btn-primary">Pesan Sekarang</a>
+        <button type="button" class="btn btn-pay" data-open-pay>Bayar</button>
+        <a href="#produk" class="btn btn-ghost">Lihat Menu</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>6 orang</b><span>mahasiswa kreatif</span></div>
+        <div><b>2</b><span>Metode Pemesanan</span></div>
+        <div><b>Created By</b><span>M. Alif Ramadhan</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="phone-shell">
+          <div class="phone-speaker"></div>
+          <div class="phone-screen">
+            <div class="platform-top"><span>JusTFriend</span><b>F</b></div>
+            <div class="platform-greeting">Dashboard</div>
+            <div class="platform-greeting platform-user">Halo, JusTmates! <strong>Selamat datang</strong></div>
+            <div class="platform-alert"><span>!</span> Ada promo jus untukmu hari ini</div>
+            <div class="platform-balance">
+              <span>Saldo poin</span><strong>2.450</strong><small>+120 poin dari pesanan terakhir</small>
+              <div class="balance-ring"><b>78%</b><span>member</span></div>
+            </div>
+            <div class="platform-label">Pesanan favorit</div>
+            <div class="platform-menu">
+              <div><i class="fruit-dot mango"></i><span>Mango Glow</span><b>15K</b></div>
+              <div><i class="fruit-dot berry"></i><span>Pink Dragon</span><b>18K</b></div>
+              <div><i class="fruit-dot lime"></i><span>Green Fresh</span><b>17K</b></div>
+            </div>
+            <button class="platform-button" type="button">Pesan sekarang <span>→</span></button>
+            <div class="platform-nav"><span class="active">⌂<small>Home</small></span><span>▣<small>Pesanan</small></span><span>♡<small>Favorit</small></span><span>☰<small>Lainnya</small></span></div>
+          </div>
+        </div>
+        <div class="hero-badge"><b>4.9/5</b><span>rating pelanggan</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="tentang" class="tentang">
+  <div class="wrap tentang-grid">
+    <div>
+      <div class="eyebrow">Tentang JustFriend</div>
+      <h2>Dari dapur kecil, jadi teman minum harian mahasiswa.</h2>
+      <p class="body" style="margin-top:22px;">JustFriend lahir dari kebiasaan sederhana: meracik jus segar tiap pagi untuk teman satu kos. Dari situ, resep dan racikan dikembangkan jadi menu jus dan teh buah yang konsisten rasanya, dibuat dari buah pilihan tanpa pemanis buatan.</p>
+      <p class="body">Nama "JustFriend" mewakili posisi kami yakni bukan sekadar penjual minuman, tapi teman yang selalu ada saat butuh sesuatu yang segar dan menyehatkan di tengah hari yang padat.</p>
+    </div>
+    <div class="value-list">
+      <div class="value-item">
+        <div class="value-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 6 5 9 5 13a7 7 0 0014 0c0-4-3-7-7-11z" stroke="#F2A72E" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div><h4>Bahan asli, tanpa pengawet</h4><p>Buah dipetik dan diproses dalam 24 jam, tanpa pemanis atau pengawet buatan.</p></div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#F2A72E" stroke-width="2"/><path d="M8 12l3 3 5-6" stroke="#F2A72E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div><h4>Konsisten di setiap gelas</h4><p>Resep terukur lewat SOP dapur, jadi rasa gelas pertama sama dengan gelas ke-seribu.</p></div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M4 6h16M4 18h16" stroke="#F2A72E" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div><h4>Dekat dengan pelanggan</h4><p>Hadir lewat gerai, mitra ojek online, dan langganan kantor supaya mudah dijangkau.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="produk">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Menu</div>
+      <h2>Produk andalan kami</h2>
+      <p>Lima menu inti yang menopang variasi menu jualan kami.</p>
+    </div>
+    <div class="produk-grid">
+      <div class="produk-card">
+        <div class="produk-photo">
+          <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bgM" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE8B0"/><stop offset="1" stop-color="#FFD37A"/></linearGradient>
+              <linearGradient id="liqM" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC63D"/><stop offset="1" stop-color="#C96F00"/></linearGradient>
+              <clipPath id="jarM"><path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z"/></clipPath>
+            </defs>
+            <rect width="300" height="225" fill="url(#bgM)"/>
+            <circle cx="235" cy="45" r="55" fill="#ffffff" opacity="0.18"/>
+            <g clip-path="url(#jarM)">
+              <rect x="90" y="95" width="120" height="105" fill="url(#liqM)"/>
+              <circle cx="140" cy="130" r="5" fill="#fff" opacity="0.5"/>
+              <circle cx="165" cy="150" r="4" fill="#fff" opacity="0.4"/>
+              <rect x="95" y="60" width="16" height="140" fill="#fff" opacity="0.16" transform="rotate(10 103 130)"/>
+            </g>
+            <path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z" fill="none" stroke="#fff" stroke-width="3" opacity="0.75"/>
+            <rect x="152" y="30" width="9" height="45" rx="4" fill="#fff" transform="rotate(18 156 52)"/>
+            <g transform="translate(196 48)">
+              <path d="M12 2C8 6 5 9 5 13a7 7 0 0014 0c0-4-3-7-7-11z" fill="#F2A72E" transform="scale(2.2)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="produk-body">
+          <h3>Mango Glow</h3>
+          <p>Jus Mangga yang kaya akan vitamin C dipadukan dengan susu yang nikmat.</p>
+          <div class="produk-price">Rp 10.000</div>
+        </div>
+      </div>
+      <div class="produk-card">
+        <div class="produk-photo">
+          <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bgP" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FCE1E6"/><stop offset="1" stop-color="#F9C3CE"/></linearGradient>
+              <linearGradient id="liqP" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F786A0"/><stop offset="1" stop-color="#C93F5B"/></linearGradient>
+              <clipPath id="jarP"><path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z"/></clipPath>
+            </defs>
+            <rect width="300" height="225" fill="url(#bgP)"/>
+            <circle cx="235" cy="45" r="55" fill="#ffffff" opacity="0.2"/>
+            <g clip-path="url(#jarP)">
+              <rect x="90" y="95" width="120" height="105" fill="url(#liqP)"/>
+              <circle cx="140" cy="130" r="5" fill="#fff" opacity="0.5"/>
+              <circle cx="165" cy="150" r="4" fill="#fff" opacity="0.4"/>
+              <rect x="95" y="60" width="16" height="140" fill="#fff" opacity="0.16" transform="rotate(10 103 130)"/>
+            </g>
+            <path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z" fill="none" stroke="#fff" stroke-width="3" opacity="0.75"/>
+            <rect x="152" y="30" width="9" height="45" rx="4" fill="#fff" transform="rotate(18 156 52)"/>
+            <g transform="translate(196 46)">
+              <circle r="19" fill="#E85D75"/>
+              <circle cx="-6" cy="-4" r="2.1" fill="#fff"/><circle cx="4" cy="-6" r="2.1" fill="#fff"/>
+              <circle cx="-2" cy="4" r="2.1" fill="#fff"/><circle cx="7" cy="5" r="2.1" fill="#fff"/>
+              <circle cx="-9" cy="6" r="2.1" fill="#fff"/>
+            </g>
+          </svg>
+        </div>
+        <div class="produk-body">
+          <h3>Pink Dragon</h3>
+          <p>Kombinasi jus buah naga dengan susu.</p>
+          <div class="produk-price">Rp 10.000</div>
+        </div>
+      </div>
+      <div class="produk-card">
+        <div class="produk-photo">
+          <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bgO" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE3D2"/><stop offset="1" stop-color="#FFC9A8"/></linearGradient>
+              <linearGradient id="liqO" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9A5C"/><stop offset="1" stop-color="#D9560F"/></linearGradient>
+              <clipPath id="jarO"><path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z"/></clipPath>
+            </defs>
+            <rect width="300" height="225" fill="url(#bgO)"/>
+            <circle cx="235" cy="45" r="55" fill="#ffffff" opacity="0.18"/>
+            <g clip-path="url(#jarO)">
+              <rect x="90" y="95" width="120" height="105" fill="url(#liqO)"/>
+              <circle cx="140" cy="130" r="5" fill="#fff" opacity="0.5"/>
+              <circle cx="165" cy="150" r="4" fill="#fff" opacity="0.4"/>
+              <rect x="95" y="60" width="16" height="140" fill="#fff" opacity="0.16" transform="rotate(10 103 130)"/>
+            </g>
+            <path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z" fill="none" stroke="#fff" stroke-width="3" opacity="0.75"/>
+            <rect x="152" y="30" width="9" height="45" rx="4" fill="#fff" transform="rotate(18 156 52)"/>
+            <g transform="translate(196 46)">
+              <circle r="19" fill="#FF7A3D"/>
+              <circle r="19" fill="none" stroke="#fff" stroke-width="1.4"/>
+              <path d="M0 -17V17M-17 0H17M-12 -12L12 12M12 -12L-12 12" stroke="#fff" stroke-width="1.2" opacity="0.85"/>
+            </g>
+          </svg>
+        </div>
+        <div class="produk-body">
+          <h3>Orange Splash</h3>
+          <p>Sari buah sunkist asli yang dipadukan dengan biji selasih.</p>
+          <div class="produk-price">Rp 10.000</div>
+        </div>
+      </div>
+      <div class="produk-card">
+        <div class="produk-photo">
+          <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E3F0D2"/><stop offset="1" stop-color="#C8E2A8"/></linearGradient>
+              <linearGradient id="liqA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9BC96B"/><stop offset="1" stop-color="#4C7A34"/></linearGradient>
+              <clipPath id="jarA"><path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z"/></clipPath>
+            </defs>
+            <rect width="300" height="225" fill="url(#bgA)"/>
+            <circle cx="235" cy="45" r="55" fill="#ffffff" opacity="0.2"/>
+            <g clip-path="url(#jarA)">
+              <rect x="90" y="95" width="120" height="105" fill="url(#liqA)"/>
+              <circle cx="140" cy="130" r="5" fill="#fff" opacity="0.5"/>
+              <circle cx="165" cy="150" r="4" fill="#fff" opacity="0.4"/>
+              <rect x="95" y="60" width="16" height="140" fill="#fff" opacity="0.16" transform="rotate(10 103 130)"/>
+            </g>
+            <path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z" fill="none" stroke="#fff" stroke-width="3" opacity="0.75"/>
+            <rect x="152" y="30" width="9" height="45" rx="4" fill="#fff" transform="rotate(18 156 52)"/>
+            <g transform="translate(196 46)">
+              <ellipse rx="16" ry="19" fill="#7CB342"/>
+              <ellipse rx="10" ry="13" fill="#E9F2D6"/>
+              <circle r="6" fill="#6B4423"/>
+            </g>
+          </svg>
+        </div>
+        <div class="produk-body">
+          <h3>Avocado Lovers</h3>
+          <p>Jus alpukat yang creamy, segar, dan bikin nagih.</p>
+          <div class="produk-price">Rp 10.000</div>
+        </div>
+      </div>
+      <div class="produk-card">
+        <div class="produk-photo">
+          <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9EDD3"/><stop offset="1" stop-color="#B7DDA6"/></linearGradient>
+              <linearGradient id="liqG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4A6B7"/><stop offset="1" stop-color="#2E6350"/></linearGradient>
+              <clipPath id="jarG"><path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z"/></clipPath>
+            </defs>
+            <rect width="300" height="225" fill="url(#bgG)"/>
+            <circle cx="235" cy="45" r="55" fill="#ffffff" opacity="0.18"/>
+            <g clip-path="url(#jarG)">
+              <rect x="90" y="95" width="120" height="105" fill="url(#liqG)"/>
+              <circle cx="140" cy="130" r="5" fill="#fff" opacity="0.5"/>
+              <circle cx="165" cy="150" r="4" fill="#fff" opacity="0.4"/>
+              <rect x="95" y="60" width="16" height="140" fill="#fff" opacity="0.16" transform="rotate(10 103 130)"/>
+            </g>
+            <path d="M100 68 Q100 58 112 58 L188 58 Q200 58 200 68 L191 178 Q189 192 174 192 L126 192 Q111 192 109 178 Z" fill="none" stroke="#fff" stroke-width="3" opacity="0.75"/>
+            <rect x="152" y="30" width="9" height="45" rx="4" fill="#fff" transform="rotate(18 156 52)"/>
+            <g transform="translate(196 46)">
+              <circle r="18" fill="#DDEFC8"/>
+              <circle r="12" fill="#F4A6B7"/>
+              <circle cx="-3" cy="-2" r="1.6" fill="#7A2B3A"/><circle cx="4" cy="1" r="1.6" fill="#7A2B3A"/>
+              <circle cx="-1" cy="5" r="1.6" fill="#7A2B3A"/>
+            </g>
+          </svg>
+        </div>
+        <div class="produk-body">
+          <h3>Guava Crush</h3>
+          <p>Jus jambu merah segar dengan rasa manis yang bikin happy dan tinggi antioksidan.</p>
+          <div class="produk-price">Rp 10.000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" class="kontak">
+  <div class="wrap kontak-grid">
+    <div class="kontak-info">
+      <div class="eyebrow">Kontak</div>
+      <h2>Pesan jusmu, kami siap antar rasa segar.</h2>
+      <p style="margin-top:14px;">Mau pesan jus atau ada pertanyaan seputar menu kami? Isi form di samping, tim JusTFriend akan menghubungi kamu dalam 2 hari kerja.</p>
+      <ul class="kontak-list">
+        <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3z" stroke="#F2A72E" stroke-width="2"/><path d="M3 6l9 7 9-7" stroke="#F2A72E" stroke-width="2"/></svg></span> justfriendinpolmed@gmail.com</li>
+        <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="#F2A72E" stroke-width="2"/></svg></span> +62 831-0706-6531</li>
+        <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="10" r="3" stroke="#F2A72E" stroke-width="2"/><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="#F2A72E" stroke-width="2"/></svg></span> Politeknik Negeri Medan, Sumatera Utara</li>
+        <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#F2A72E" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#F2A72E" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="#F2A72E"/></svg></span> @justfriendce3a</li>
+      </ul>
+    </div>
+    <div class="form-card">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="field"><label for="nama">Nama</label><input id="nama" type="text" placeholder="Nama lengkap" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="nama@email.com" required></div>
+        </div>
+        <div class="field"><label for="topik">Topik</label><input id="topik" type="text" placeholder="Misal: pesan jus untuk acara kantor"></div>
+        <div class="field"><label for="pesan">Pesan</label><textarea id="pesan" rows="4" placeholder="Ceritakan kebutuhanmu" required></textarea></div>
+        <button type="submit" class="btn btn-primary form-submit">Kirim Pesan</button>
+      </form>
+      <button type="button" class="btn btn-pay form-pay" data-open-pay>Bayar Pesanan</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Logo JustFriend">
+      <span>JustFriend</span>
+    </div>
+    <div class="footer-links">
+      <a href="#top">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </div>
+
+  <div class="wrap footer-meta">
+    <div class="footer-credit">
+      <span>Dibuat dengan</span>
+      <strong aria-label="kode">&lt;/&gt;</strong>
+      <span>dan</span>
+      <svg class="tailwind-mark" viewBox="0 0 54 33"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Tailwind CSS" role="img">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653 2.652 2.692 5.716 5.802 12.408 5.802 7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+          fill="#38BDF8"/>
+      </svg>
+      <span>Tailwind CSS</span>
+    </div>
+
+    <div class="footer-datetime">
+      <time class="footer-date" id="realtimeDate" aria-label="Tanggal saat ini">--</time>
+      <time class="footer-clock" id="realtimeClock" aria-label="Waktu saat ini">--:--:--</time>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">&copy; 2026 JustFriend. Semua hak cipta dilindungi.</div>
+</footer>
+
+<!-- POP-UP PEMBAYARAN -->
+<div class="pay-modal" id="payModal" role="dialog" aria-modal="true" aria-labelledby="payTitle" hidden>
+  <div class="pay-backdrop" data-close-pay></div>
+  <div class="pay-card">
+    <button class="pay-close" type="button" data-close-pay aria-label="Tutup">✕</button>
+    <h3 id="payTitle">Pembayaran</h3>
+    <p class="pay-sub">Scan QRIS di bawah, lalu konfirmasi lewat WhatsApp.</p>
+
+    <div class="pay-field">
+      <label for="payNama">Nama</label>
+      <input id="payNama" type="text" placeholder="Nama kamu">
+    </div>
+    <div class="pay-field">
+      <label for="payNominal">Nominal (Rp)</label>
+      <input id="payNominal" type="number" min="1000" step="500" placeholder="Contoh: 20000">
+    </div>
+
+    <div class="pay-panel" id="panelQris">
+      <img src="qris.jpeg" alt="QRIS JusTFriend" class="qris-img">
+      <p>Scan pakai GoPay, OVO, DANA, ShopeePay, atau m-banking.</p>
+    </div>
+
+    <button type="button" class="btn btn-primary pay-confirm" id="payConfirm">Saya sudah bayar, konfirmasi</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">Membuka Gmail untuk mengirim pesanmu...</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
