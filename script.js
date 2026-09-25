@@ -88,12 +88,30 @@ if (navToggle && navLinks) {
 }
 
 // =========================================================
-// CONTACT FORM
+// PESAN VIA WHATSAPP DARI MENU PRODUK
 // =========================================================
-if (form && toast) {
-  // Disamakan dengan email yang tampil di halaman Kontak
-  const BUSINESS_EMAIL = 'justfriendinpolmed@gmail.com';
+const WA_ADMIN = '6283107066531'; // nomor WhatsApp admin (format internasional tanpa +)
 
+document.querySelectorAll('.btn-pesan').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const product = btn.dataset.product;
+    const price = btn.dataset.price;
+    
+    const message = `Halo JusTFriend, saya ingin pesan ${product} (Rp ${price}).`;
+    const whatsappUrl = `https://wa.me/${WA_ADMIN}?text=${encodeURIComponent(message)}`;
+    
+    showToast(`Membuka WhatsApp untuk memesan ${product}...`, 1000);
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+    }, 500);
+  });
+});
+
+// =========================================================
+// CONTACT FORM - KIRIM KE WHATSAPP
+// =========================================================
+if (form) {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -102,24 +120,26 @@ if (form && toast) {
     const topik = document.getElementById('topik').value.trim();
     const pesan = document.getElementById('pesan').value.trim();
 
-    const subject = `Pesan dari ${nama}${topik ? ' - ' + topik : ''}`;
-    const body = `Nama: ${nama}\nEmail: ${email}\n\n${pesan}`;
+    if (!nama || !email || !pesan) {
+      showToast('Isi nama, email, dan pesan terlebih dahulu');
+      return;
+    }
 
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(BUSINESS_EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const message = `Halo JusTFriend,\n\nNama: ${nama}\nEmail: ${email}\nTopik: ${topik || 'Umum'}\n\nPesan:\n${pesan}`;
+    const whatsappUrl = `https://wa.me/${WA_ADMIN}?text=${encodeURIComponent(message)}`;
 
-    showToast('Membuka Gmail untuk mengirim pesanmu...', 1000);
+    showToast('Membuka WhatsApp untuk mengirim pesanmu...', 1000);
     form.reset();
 
     setTimeout(() => {
-      window.location.href = gmailUrl;
-    }, 1000);
+      window.open(whatsappUrl, '_blank');
+    }, 500);
   });
 }
 
 // =========================================================
 // PEMBAYARAN (QRIS)
 // =========================================================
-const WA_NUMBER = '6283107066531'; // nomor WhatsApp penerima konfirmasi (format internasional tanpa +)
 const payModal = document.getElementById('payModal');
 
 if (payModal) {
@@ -154,7 +174,7 @@ if (payModal) {
       const metode = 'QRIS';
       const text = `Halo JusTFriend, saya sudah bayar.\n\nNama: ${nama}\nMetode: ${metode}\nNominal: Rp ${rupiah}\n\n(Bukti pembayaran saya lampirkan di chat ini)`;
 
-      window.open(`https://wa.me/${6282273389081}?text=${encodeURIComponent(text)}`, '_blank');
+      window.open(`https://wa.me/${WA_ADMIN}?text=${encodeURIComponent(text)}`, '_blank');
       closePay();
     });
   }
