@@ -53,9 +53,7 @@ button{font-family:inherit;}
 section{padding:96px 0;}
 :focus-visible{outline:3px solid var(--mango); outline-offset:3px;}
 
-/* =========================================================
-   PARAGRAF RATA KANAN-KIRI (JUSTIFY) DI SEMUA SECTION
-   ========================================================= */
+/* PARAGRAF RATA KANAN-KIRI (JUSTIFY) */
 .hero p.lead,
 .tentang p.body,
 .value-item p,
@@ -109,14 +107,10 @@ section{padding:96px 0;}
     linear-gradient(180deg, #ffffff 0%, rgba(228,247,220,0.75) 100%);
   border-bottom:1px solid var(--line);
 }
-
 @media (min-width:921px){
   .nav{margin-top:0;}
-  .hero{
-    background:linear-gradient(180deg, #ffffff 0%, rgba(228,247,220,0.85) 100%);
-  }
+  .hero{background:linear-gradient(180deg, #ffffff 0%, rgba(228,247,220,0.85) 100%);}
 }
-
 .hero-inner{
   display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
 }
@@ -128,9 +122,7 @@ section{padding:96px 0;}
 }
 .hero-tag .dot{width:8px; height:8px; border-radius:50%; background:var(--leaf);}
 .hero h1{font-size:clamp(2.4rem, 4.2vw, 3.6rem); letter-spacing:-0.01em;}
-.hero p.lead{
-  margin-top:20px; font-size:1.12rem; color:var(--ink-soft); max-width:46ch;
-}
+.hero p.lead{margin-top:20px; font-size:1.12rem; color:var(--ink-soft); max-width:46ch;}
 .hero-actions{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
 .btn{
   display:inline-flex; align-items:center; gap:8px;
@@ -234,17 +226,19 @@ section{padding:96px 0;}
   transition:transform .2s, box-shadow .2s, border-color .2s;
 }
 .produk-card:hover{transform:translateY(-5px); border-color:rgba(47,107,74,0.45); box-shadow:0 18px 32px -22px var(--forest-deep);}
-.produk-photo{width:100%; aspect-ratio:4/3; overflow:hidden; background:var(--cream-2);}
-.produk-photo svg{width:100%; height:100%; display:block;}
-.produk-body{padding:22px 24px 24px; display:flex; flex-direction:column; gap:12px; flex:1;}
-.produk-swatch{
-  width:44px; height:44px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+.produk-photo{width:100%; overflow:hidden; background:var(--cream-2);}
+.produk-photo svg{width:100%; height:auto; display:block;}
+.produk-photo img{
+  width:100%; height:auto;
+  object-fit:contain; display:block;
+  transition:transform .35s ease;
 }
+.produk-card:hover .produk-photo img{transform:scale(1.03);}
+.produk-body{padding:22px 24px 24px; display:flex; flex-direction:column; gap:12px; flex:1;}
+.produk-swatch{width:44px; height:44px; border-radius:14px; display:flex; align-items:center; justify-content:center;}
 .produk-card h3{font-size:1.15rem;}
 .produk-card p{color:var(--ink-soft); font-size:0.92rem;}
-.produk-price{
-  margin-top:auto; font-family:'Baloo 2',sans-serif; font-weight:700; color:var(--mango-deep); font-size:1.05rem;
-}
+.produk-price{margin-top:auto; font-family:'Baloo 2',sans-serif; font-weight:700; color:var(--mango-deep); font-size:1.05rem;}
 
 /* TESTIMONI */
 .testimoni{background:linear-gradient(180deg, rgba(228,247,220,0.4), rgba(255,255,255,0.8));}
@@ -256,13 +250,9 @@ section{padding:96px 0;}
   transition:transform .2s, box-shadow .2s;
 }
 .testimoni-card:hover{transform:translateY(-4px); box-shadow:0 16px 32px -18px var(--forest-deep);}
-.testimoni-rating{
-  font-size:0.9rem; color:var(--mango); font-weight:700; letter-spacing:1px;
-}
+.testimoni-rating{font-size:0.9rem; color:var(--mango); font-weight:700; letter-spacing:1px;}
 .testimoni-text{color:var(--ink-soft); font-size:0.95rem; line-height:1.7; flex:1;}
-.testimoni-author{
-  display:flex; gap:12px; align-items:center; padding-top:16px; border-top:1px solid var(--line);
-}
+.testimoni-author{display:flex; gap:12px; align-items:center; padding-top:16px; border-top:1px solid var(--line);}
 .author-avatar{
   width:44px; height:44px; border-radius:50%; background:var(--mango); color:var(--cream);
   display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.1rem;
@@ -316,7 +306,7 @@ section{padding:96px 0;}
 .pay-panel{text-align:center; margin:16px 0;}
 .pay-panel[hidden]{display:none;}
 .pay-panel p{font-size:0.85rem; color:var(--ink-soft); margin-top:8px;}
-.qris-img{width:220px; height:220px; object-fit:contain; margin:0 auto; border:1px solid var(--line); border-radius:16px; padding:8px; background:#fff;}
+.qris-img{width:500px; height:500px; object-fit:contain; margin:0 auto; border:1px solid var(--line); border-radius:16px; padding:8px; background:#fff;}
 .pay-confirm{width:100%; justify-content:center;}
 
 /* FOOTER */
@@ -337,15 +327,9 @@ footer{background:var(--forest-black); padding:44px 0 26px; color:rgba(251,246,2
   color:var(--cream); font-family:monospace; font-size:0.9rem; font-weight:700;
   letter-spacing:0.08em; font-variant-numeric:tabular-nums;
 }
-.footer-datetime{
-  display:flex; align-items:center; justify-content:flex-end;
-  gap:16px; margin-left:auto; text-align:right;
-}
+.footer-datetime{display:flex; align-items:center; justify-content:flex-end; gap:16px; margin-left:auto; text-align:right;}
 .footer-date{font-size:0.82rem; color:rgba(251,246,233,0.72); text-transform:capitalize;}
-.footer-bottom{
-  margin-top:14px; padding-top:0;
-  font-size:0.8rem; text-align:center;
-}
+.footer-bottom{margin-top:14px; padding-top:0; font-size:0.8rem; text-align:center;}
 
 /* TOAST */
 .toast{
@@ -374,16 +358,14 @@ footer{background:var(--forest-black); padding:44px 0 26px; color:rgba(251,246,2
   .nav-links a{padding:12px 14px; border-radius:8px;}
   .nav-links a:hover{background:var(--cream-2);}
   .sound-toggle{display:block; margin-left:auto; flex-shrink:0; order:3;}
-  .hero-inner, .tentang-grid, .kontak-grid{
-    grid-template-columns:1fr; gap:40px;
-  }
+  .hero-inner, .tentang-grid, .kontak-grid{grid-template-columns:1fr; gap:40px;}
   .hero p.lead, .tentang p.body, .kontak-info p{max-width:none;}
   .produk-grid{grid-template-columns:repeat(2,1fr);}
   .testimoni-grid{grid-template-columns:repeat(2,1fr);}
   section{padding:64px 0;}
 }
 
-/* TABLET (601px - 920px) */
+/* TABLET */
 @media (min-width:601px) and (max-width:920px){
   .wrap{width:min(92%, 720px);}
   .produk-grid{gap:18px;}
@@ -437,14 +419,14 @@ footer{background:var(--forest-black); padding:44px 0 26px; color:rgba(251,246,2
   .footer-datetime{flex-direction:column; gap:4px;}
 }
 
-/* FOOTER: laptop / desktop -> kredit di kiri, tanggal & jam di kanan */
+/* FOOTER desktop */
 @media (min-width:921px){
   .footer-meta{flex-direction:row;}
   .footer-credit{margin-right:auto;}
   .footer-datetime{flex-direction:row; margin-left:auto;}
 }
 
-/* FOOTER: HP & tablet -> rata tengah */
+/* FOOTER HP & tablet */
 @media (max-width:920px){
   .footer-datetime{justify-content:center; margin-left:0; text-align:center;}
 }
@@ -452,3 +434,110 @@ footer{background:var(--forest-black); padding:44px 0 26px; color:rgba(251,246,2
 @media (prefers-reduced-motion:reduce){
   *{transition:none !important; animation:none !important;}
 }
+
+/* ===== KERANJANG (tempel di paling bawah style.css) ===== */
+
+/* Tombol keranjang di nav (di sebelah tombol backsound) */
+.cart-btn{
+  position:relative; width:42px; height:42px; border:0; border-radius:50%;
+  background:var(--mango); color:var(--forest-deep); cursor:pointer;
+  display:grid; place-items:center; flex-shrink:0;
+  box-shadow:0 8px 16px -10px var(--mango-deep); transition:transform .18s, background .18s;
+}
+.cart-btn:hover{background:var(--mango-deep); color:#fff; transform:translateY(-2px);}
+.cart-badge{
+  position:absolute; top:-4px; right:-4px; min-width:20px; height:20px; padding:0 5px;
+  border-radius:999px; background:var(--berry); color:#fff; font-size:0.7rem; font-weight:700;
+  display:grid; place-items:center; border:2px solid #fff; line-height:1;
+}
+.cart-badge[hidden]{display:none;}
+
+/* Drawer keranjang */
+.cart-drawer{position:fixed; inset:0; z-index:180;}
+.cart-drawer[hidden]{display:none;}
+.cart-backdrop{position:absolute; inset:0; background:rgba(4,19,12,0.6); backdrop-filter:blur(3px);}
+.cart-panel{
+  position:absolute; top:0; right:0; bottom:0; width:min(420px,100%);
+  background:#fff; display:flex; flex-direction:column;
+  box-shadow:-20px 0 40px -24px rgba(8,35,24,0.5);
+  animation:cartIn .25s ease;
+}
+@keyframes cartIn{from{transform:translateX(30px); opacity:0;}to{transform:none; opacity:1;}}
+.cart-head{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:20px 22px; border-bottom:1px solid var(--line);
+}
+.cart-head .pay-close{position:static; flex-shrink:0;}
+.cart-body{flex:1; overflow-y:auto; padding:8px 22px; -webkit-overflow-scrolling:touch;}
+.cart-empty{text-align:center; padding:56px 8px; color:var(--ink-soft);}
+.cart-empty strong{display:block; font-family:'Baloo 2',sans-serif; font-size:1.2rem; color:var(--forest); margin-bottom:6px;}
+.cart-item{
+  display:grid; grid-template-columns:1fr auto auto; gap:8px 12px; align-items:center;
+  padding:16px 0; border-bottom:1px solid var(--line);
+}
+.cart-item-info{min-width:0;}
+.cart-item-info h4{font-size:1rem; overflow-wrap:anywhere;}
+.cart-item-price{font-size:0.8rem; color:var(--ink-soft);}
+.cart-item-ctrl{display:grid; justify-items:end; gap:6px;}
+.qty{display:inline-flex; align-items:center; border:1.5px solid var(--line); border-radius:999px; overflow:hidden;}
+.qty-btn{width:32px; height:32px; border:0; background:var(--cream-2); color:var(--forest); font-size:1.1rem; font-weight:700; cursor:pointer;}
+.qty-btn:hover{background:var(--leaf-light);}
+.qty-val{min-width:34px; text-align:center; font-weight:700; font-variant-numeric:tabular-nums;}
+.cart-item-sub{font-family:'Baloo 2',sans-serif; color:var(--mango-deep); font-variant-numeric:tabular-nums; white-space:nowrap;}
+.cart-del{width:30px; height:30px; border:0; border-radius:50%; background:transparent; color:#b7475d; cursor:pointer;}
+.cart-del:hover{background:rgba(232,93,117,0.12);}
+.cart-foot{padding:18px 22px 22px; border-top:1px solid var(--line); display:grid; gap:12px; background:#fff;}
+.cart-foot[hidden]{display:none;}
+.cart-total{display:flex; justify-content:space-between; align-items:baseline; font-weight:700; color:var(--forest);}
+.cart-total strong{font-family:'Baloo 2',sans-serif; font-size:1.5rem; color:var(--mango-deep); font-variant-numeric:tabular-nums;}
+.cart-checkout{width:100%; justify-content:center;}
+.cart-clear{border:0; background:none; color:var(--ink-soft); font-size:0.85rem; text-decoration:underline; cursor:pointer;}
+
+/* Ringkasan di modal checkout */
+.pay-summary{border:1.5px solid var(--line); border-radius:14px; padding:6px 14px; margin-bottom:14px;}
+.sum-row{display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:0.9rem;}
+.sum-row:last-child{border-bottom:0;}
+.sum-row span{min-width:0; overflow-wrap:anywhere;}
+.sum-row b{white-space:nowrap; font-variant-numeric:tabular-nums;}
+.pay-total{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px; padding:12px 14px; border-radius:14px; background:var(--cream-2); font-weight:700; color:var(--forest);}
+.pay-total strong{font-family:'Baloo 2',sans-serif; font-size:1.4rem; color:var(--mango-deep); font-variant-numeric:tabular-nums;}
+.pay-field textarea{border:1.5px solid var(--line); border-radius:12px; padding:11px 14px; font-family:inherit; font-size:0.95rem; resize:vertical;}
+.pay-field textarea:focus{border-color:var(--mango); outline:none;}
+.pay-back{width:100%; justify-content:center; margin-top:10px;}
+
+/* Nav mobile: pastikan cart + backsound rapi di sebelah kanan */
+@media (max-width:920px){
+  .nav-actions{margin-left:auto; gap:8px; order:3;}
+  .nav-actions .sound-toggle{margin-left:0; order:0;}
+}
+@media (max-width:560px){
+  .cart-btn{width:38px; height:38px;}
+  .cart-panel{width:100%;}
+  .cart-head,.cart-foot{padding-left:16px; padding-right:16px;}
+  .cart-body{padding:6px 16px;}
+  .cart-item{grid-template-columns:1fr auto; }
+  .cart-del{grid-column:2; grid-row:1; justify-self:end;}
+  .cart-item-ctrl{grid-column:1 / -1; grid-template-columns:auto 1fr; align-items:center; justify-items:end; width:100%;}
+}
+
+/* TEKS JUSTIFY di semua device (termasuk HP) */
+.hero p.lead,
+.tentang p.body,
+.value-item p,
+.section-head p,
+.produk-card p,
+.testimoni-text,
+.kontak-info p,
+.pay-sub,
+.pay-panel p,
+.cart-empty p{
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  overflow-wrap:break-word;
+}
+/* Judul section tengah tetap center */
+.section-head.center h2{text-align:center;}
+.section-head.center p{text-align:justify; text-align-last:center;}
+.cart-empty p{text-align-last:center;}
